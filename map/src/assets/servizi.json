@@ -1,0 +1,87 @@
+
+[
+  {
+    "id": "S1",
+    "nome": "Amazon",
+    "countries": [
+  {
+      "id":"IT",
+      "name":"Italy"
+    },
+    {
+      "id":"ES",
+      "name":"Spain"
+    }
+  ]
+
+  },
+  {
+    "id": "S2",
+    "nome": "Netflix",
+    "countries": [
+  {
+      "id":"FR",
+      "name":"France"
+    },
+    {
+      "id":"DE",
+      "name":"Germany"
+    },
+    {
+      "id":"BG",
+      "name":"Bulgaria"
+    }
+  ]
+
+  },
+  {
+    "id": "S3",
+    "nome": "Spotify",
+    "countries": [
+    {
+      "id":"DE",
+      "name":"Germany"
+    },
+    {
+      "id":"CH",
+      "name":"Switzerland"
+    },
+        {
+      "id":"SE",
+      "name":"Sweden"
+    }
+  ]
+
+  },
+    {
+    "id": "S4",
+    "nome": "Prime Video",
+    "countries": [
+    {
+      "id":"DE",
+      "name":"Germany"
+    },
+    {
+      "id":"FR",
+      "name":"France"
+    },
+        {
+      "id":"IT",
+      "name":"Italy"
+    }
+  ]
+
+  },
+  {
+    "id": "S5",
+    "nome": "Disney plus",
+    "countries": [
+    {
+      "id":"DE",
+      "name":"Germany"
+    }
+  ]
+
+  }
+  
+]
