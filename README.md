@@ -1,42 +1,63 @@
 # Mappa Iterativa
 
-una webapp che mostra un elenco di servizi filtrabili per stato attivo e viceversa 
+Web app che mostra un elenco di servizi filtrabili in base allo stato attivo e viceversa.
 
-## Struttura: 
+---
 
-- App.vue
-- Map.vue 
-- Sidebar.vue 
+## Struttura del progetto
 
-### Composables: 
-- useStatoAttivo.js: ritorna l'elenco dei servizi sullo stato selezionato
+### Componenti principali
+- **App.vue**
+- **Map.vue**
+- **Sidebar.vue**
 
-- useServizioAttivo.js: ritorna dati utili del servizio attivo in quel momento
+### Composables
+- **useStatoAttivo.js**  
+  Ritorna l’elenco dei servizi in base allo stato selezionato.
 
-- useZoom.js: gestisce lo zoom grazie alla libreria svgPanZoom
+- **useServizioAttivo.js**  
+  Ritorna i dati del servizio attivo in quel momento.
 
-### Store:
+- **useZoom.js**  
+  Gestisce lo zoom della mappa tramite la libreria `svgPanZoom`.
 
--store.js: contiene il json dei servizi attivi, il servizio, lo stato attivo in quel momento e contiene la logica per rimuovere o aggiungere uno stato
+### Store
+- **store.js**  
+  Contiene:
+  - il JSON dei servizi attivi
+  - il servizio attivo
+  - lo stato attivo corrente  
+  Include inoltre la logica per aggiungere o rimuovere uno stato.
 
-### Assets:
+### Assets
+- **servizi.json**  
+  Contiene la lista dei servizi attivi, con:
+  - ID e nome del servizio
+  - array di nazioni (nome e ID)
 
-- servizi.json: contiene la lista di servizi attivi, con nome e id del servizio, array di nazioni per nome e per id
+- **statiattivabili.json**  
+  Contiene la lista degli ID degli stati da illuminare all’avvio e ad ogni reset della mappa.
 
-- statiattivabili.json: contiene la lista degli id da illuminare all'avvio e ad ogni reset della mappa
+---
 
-## Come Usare La Mappa
+## Come usare la mappa
 
-> Inserire i nuovi servizi dentro il file servizi.json, con ID univoco, nome del servizio e countries come oggetto, composto da ID dello stato e name dello stato
+- Inserire nuovi servizi nel file `servizi.json`, specificando:
+  - ID univoco
+  - nome del servizio
+  - `countries` come oggetto contenente ID e nome dello stato
 
-**Fondamentale che l'ID dello stato inserito sia uguale a quello presente nell'svg (puoi consultare /src/assets/europe.svg)**
+⚠️ **È fondamentale che l’ID dello stato corrisponda a quello presente nel file SVG**  
+(puoi consultare `/src/assets/europe.svg`).
 
-> Successivamente, qualora non fosse presente, inserire l'id dello stato aggiunto dentro statiattivabili.json 
+- Se non già presente, inserire l’ID dello stato anche nel file `statiattivabili.json`.
 
-**Anche qui è fondamentale che l'id coincida con quello originale dell'svg**
+⚠️ **Anche in questo caso l’ID deve coincidere con quello originale dell’SVG**.
 
+---
 
-## Feature della mappa
+## Funzionalità della mappa
 
-> è possibile aggiungere e rimuovere gli stati direttamente dalla mappa, basterà selezionare un servizio qualsiasi e apparirà l'opzione aggiungi stato o rimuovi stato, su cui sarà possibile cliccare sullo stato tra quelli disponibili in mappa
-
+- È possibile aggiungere o rimuovere stati direttamente dalla mappa.
+- Selezionando un servizio, apparirà l’opzione per aggiungere o rimuovere uno stato.
+- L’utente può cliccare sugli stati disponibili direttamente sulla mappa.
